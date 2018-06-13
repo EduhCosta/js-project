@@ -6,7 +6,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && npm test",
-      "pre-push": "npm run lint"
+      "pre-push": "npm run lint && npm run test:coverage"
     }
   },
   "scripts": {
@@ -14,7 +14,16 @@
     "build-dev": "npm run lint && webpack --config webpack.config.js",
     "build-prod": "npm run lint && cross-env NODE_ENV=production webpack --config webpack.config.js",
     "start": "webpack-dev-server",
-    "test": "npm run lint && ./node_modules/.bin/mocha tests/**/*.spec.js --bail"
+    "test": "npm run lint && ./node_modules/.bin/mocha tests/**/*.spec.js --bail --require babel-register",
+    "test:watch": "npm run lint && ./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": ["text", "html"],
+    "exclude": ["tests/**"]
   },
   "keywords": [],
   "author": "",
@@ -24,7 +33,9 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2017": "^6.24.1",
+    "babel-register": "^6.26.0",
     "babili-webpack-plugin": "^0.1.2",
     "chai": "^4.1.2",
     "cross-env": "^5.2.0",
@@ -39,6 +50,7 @@
     "husky": "^1.0.0-rc.8",
     "mocha": "^5.2.0",
     "node-sass": "^4.9.0",
+    "nyc": "^12.0.2",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
     "postcss-flexbugs-fixes": "^3.3.1",
     "postcss-loader": "^2.1.5",
