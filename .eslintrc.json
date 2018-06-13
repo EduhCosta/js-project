@@ -1,9 +1,15 @@
 {
-  "extends": "airbnb-base",
+  "extends": [ "airbnb-base", "eslint:recommended" ],
   "plugins": [
-    "import"
+    "import",
+    "mocha"
   ],
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "mocha/no-exclusive-tests": "error"
+  },
+  "env": {
+    "node": true,
+    "mocha": true
   }
 }
