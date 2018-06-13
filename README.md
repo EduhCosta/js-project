@@ -16,7 +16,7 @@
 
 ### Additional Development Tools
   * EsLint
-  * Husk
+  * Husky
   * Editorconfig
 
 ### Support
