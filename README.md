@@ -1,4 +1,4 @@
-## Javascript Project - 2018
+## Javascript Project
 
 ### To user
   Clone this project, execute `npm install`.
