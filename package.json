@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
+  },
   "scripts": {
-    "precommit": "npm run lint",
-    "prepush": "npm run lint",
     "lint": "eslint src/**/*.js",
     "build-dev": "npm run lint && webpack --config webpack.config.js",
     "build-prod": "npm run lint && cross-env NODE_ENV=production webpack --config webpack.config.js",
