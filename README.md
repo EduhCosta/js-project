@@ -1,17 +1,17 @@
 ## Javascript Project - 2018
 
 ### Server development/build/watch
-..* Webpack
+  * Webpack
 
 ### Unit Tests
-..* Mocha
-..* Chai
-..* Sinon
+  * Mocha
+  * Chai
+  * Sinon
 
 ### Additional Development Tools
-..* EsLint
-..* Husk
-..* Editorconfig
+  * EsLint
+  * Husk
+  * Editorconfig
 
 ### Support
-..* ES2017 (ES8) - with Babel
+  * ES2017 (ES8) - with Babel
