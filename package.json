@@ -30,7 +30,7 @@
     "eslint-plugin-import": "^2.12.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^0.14.3",
+    "husky": "^1.0.0-rc.8",
     "mocha": "^5.2.0",
     "node-sass": "^4.9.0",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
