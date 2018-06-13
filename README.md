@@ -11,6 +11,9 @@
   * Chai
   * Sinon
 
+### Coverage
+  * Nyc
+
 ### Additional Development Tools
   * EsLint
   * Husk
