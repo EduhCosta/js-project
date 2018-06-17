@@ -1,7 +1,8 @@
 {
-  "name": "teste-webpack",
+  "name": "js-base-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Base roject to development in pure Javascript",
+  "author": "Eduardo Costa",
   "main": "index.js",
   "husky": {
     "hooks": {
@@ -22,11 +23,15 @@
     "functions": 80,
     "lines": 80,
     "check-coverage": true,
-    "reporter": ["text", "html"],
-    "exclude": ["tests/**"]
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.6.2",
